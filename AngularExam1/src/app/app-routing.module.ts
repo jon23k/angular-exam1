@@ -7,7 +7,7 @@ import { RandomComponent} from 'app/random/random.component';
 const routes: Routes = [
   {path: '', pathMatch:'full', redirectTo:'list'},
   {path: 'list', component: ListComponent},
-  {path: 'random', component: RandomComponent},
+  {path: 'random/:floor', component: RandomComponent},
   {path: 'signin', component: SigninComponent},
   { path:'**', redirectTo: 'list'},
 ];
