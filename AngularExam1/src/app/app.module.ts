@@ -8,6 +8,10 @@ import { RandomComponent } from './random/random.component';
 import { ListComponent } from './list/list.component';
 import {MaterialModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { environment } from "environments/environment";
+import { AngularFireModule} from 'angularfire2';
+import { FormsModule } from '@angular/forms';
+import { AngularFireDatabaseModule} from 'angularfire2/database'
 
 import {
   MdAutocompleteModule,
@@ -73,7 +77,10 @@ export const MaterialModules = [
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AngularFireDatabaseModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]
